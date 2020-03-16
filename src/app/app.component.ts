@@ -22,11 +22,11 @@ export class AppComponent {
     },
      {
       id: 2,
-      name: "Tháp Rùa – Hồ Hoàn Kiếm",
+      name: "Vịnh hạ long",
       img:
-        "https://www.vietfuntravel.com.vn/image/data/Ha-Noi/ho-hoan-kiem/Gioi-thieu-doi-net-ve-Ho-Hoan-Kiem-Ho-Guom-o-Ha-Noi-3.jpg",
+        "https://znews-photo.zadn.vn/w660/Uploaded/cqxrcajwp/2014_06_29/11.jpg",
       S: "100m2",
-      name_celebrity: "Lý thái tổ",
+      name_celebrity: "Nguyễn Du",
       img_celebrity:
         "https://i-vnexpress.vnecdn.net/2018/08/14/gg-1534251255-5397-1534251332_660x0.jpg",
       born_year: 1570,
@@ -38,7 +38,7 @@ export class AppComponent {
       img:
         "https://znews-photo.zadn.vn/w660/Uploaded/zagttv/2017_09_03/P12609563_MUAC.jpg",
       S: "100m2",
-      name_celebrity: "Lý thái tổ",
+      name_celebrity: "Quang trung",
       img_celebrity:
         "https://i-vnexpress.vnecdn.net/2018/08/14/gg-1534251255-5397-1534251332_660x0.jpg",
       born_year: 1570,
