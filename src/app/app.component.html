@@ -6,9 +6,6 @@
 		<div class="col-sm-5 col-md-3">
 			<div class="form-group">
 				<label for="">Tên danh lam thắng cảnh</label>
-        	<input [value] = "addPlace.id"
-         (keyup) ="addPlace.name= $event.target.value" type="hidden" 
-         class="form-control" placeholder="" aria-describedby="helpId">
 
 				<input [value] = "addPlace.name"
          (keyup) ="addPlace.name= $event.target.value" type="text" 
@@ -95,7 +92,7 @@
 											<td><img [src]="p.img_celebrity" width="70" ></td>
 											<td>{{p.born_year}}</td>
 											<td>{{p.die_year}}</td>
-											<td> <button type="button" (click) = "addnewPlace()" class="btn btn-primary info">Sửa</button>
+											<td> <button type="button" (click) = "edit(p.id)" class="btn btn-primary info">Sửa</button>
 											</td>
 											<td><button type="button" (click)="removePlace(p)" name="" id="" class="btn btn-primary danger">Xóa</button>
 											</td>

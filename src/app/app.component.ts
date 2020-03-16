@@ -71,13 +71,12 @@ export class AppComponent {
        this.addPlace.id = max++;
        console.log(max);
        this.place.push(this.addPlace);
-    }else{
-       this.place.forEach(function(val){
-       this.val = this.addPlace;
-     }  
-     );
     }
   
+    }
+  edit(event){
+    this.addPlace = event.target;
   }
+  
  
 }
