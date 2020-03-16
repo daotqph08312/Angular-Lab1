@@ -1,0 +1,106 @@
+<hello name="{{ name }}"></hello>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5 col-md-3">
+			<div class="form-group">
+				<label for="">Tên danh lam thắng cảnh</label>
+        	<input [value] = "addPlace.id"
+         (keyup) ="addPlace.name= $event.target.value" type="hidden" 
+         class="form-control" placeholder="" aria-describedby="helpId">
+
+				<input [value] = "addPlace.name"
+         (keyup) ="addPlace.name= $event.target.value" type="text" 
+         class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+				<div class="form-group">
+					<label for="">Image</label>
+					<input [value] = "addPlace.img"
+         (keyup) ="addPlace.img= $event.target.value"
+           type="text"  class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+					<div class="form-group">
+						<label for="">Diện tích</label>
+						<input [value] = "addPlace.S"
+         (keyup) ="addPlace.S= $event.target.value"
+             type="text"  class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+					</div>
+					<div class="col-sm-5 col-md-3">
+						<div class="form-group">
+							<label for="">Danh nhân</label>
+							<input [value] = "addPlace.name_celebrity"
+         (keyup) ="addPlace.name_celebrity= $event.target.value"
+               type="text"   class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+							<div class="form-group">
+								<label for="">Ảnh danh nhân</label>
+								<input [value] = "addPlace.img_celebrity"
+         (keyup) ="addPlace.img_celebrity= $event.target.value"
+          type="text"   class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+								<div class="form-group">
+									<label for="">Năm sinh</label>
+									<input [value] = "addPlace.born_year"
+         (keyup) ="addPlace.born_year= $event.target.value"
+                   type="text"   class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+									<div class="form-group">
+										<label for="">Năm mất</label>
+										<input [value] = "addPlace.die_year"
+         (keyup) ="addPlace.die_year= $event.target.value"
+                    type="text"   class="form-control" placeholder="" aria-describedby="helpId">
+
+</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<button (click) = "addnewPlace()" type="button"   class="btn btn-primary info">Thêm</button>
+                  <input style="margin-left:30px;" type="reset" class="btn btn-primary success">
+								</div>
+							</div>
+
+
+							<div class="container">
+								<h2 class="text-center"> Thông tin danh lam thắng cảnh</h2>
+								<table class="table">
+									<thead class="thead-dark">
+										<tr>
+											<th scope="col">ID</th>
+											<th scope="col">Tên địa danh</th>
+											<th scope="col">Image</th>
+											<th scope="col">Diện tích</th>
+											<th scope="col">Danh nhân</th>
+											<th scope="col">Ảnh danh nhân</th>
+											<th scope="col">Năm sinh</th>
+											<th scope="col">Năm mất</th>
+											<th scope="col">Sửa</th>
+											<th scope="col">Xóa</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr *ngFor="let p of place">
+											<th scope="row">{{p.id}}</th>
+											<td>{{p.name}}</td>
+											<td> <img [src]="p.img" width="70"></td>
+											<td>{{p.S}}</td>
+											<td>{{p.name_celebrity}}</td>
+											<td><img [src]="p.img_celebrity" width="70" ></td>
+											<td>{{p.born_year}}</td>
+											<td>{{p.die_year}}</td>
+											<td> <button type="button" (click) = "addnewPlace()" class="btn btn-primary info">Sửa</button>
+											</td>
+											<td><button type="button" (click)="removePlace(p)" name="" id="" class="btn btn-primary danger">Xóa</button>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
