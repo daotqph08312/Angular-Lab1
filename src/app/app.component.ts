@@ -74,8 +74,8 @@ export class AppComponent {
     }
   
     }
-  edit(event){
-    this.addPlace = event.target;
+edit(place){
+    this.addPlace=place;
   }
   
  
