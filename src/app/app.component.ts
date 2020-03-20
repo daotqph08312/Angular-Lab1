@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { TimerServiceService } from './services/timer-service.service';
 @Component({
   selector: "my-app",
   templateUrl: "./app.component.html",
